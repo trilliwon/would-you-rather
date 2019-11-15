@@ -47,6 +47,27 @@ a {
   font-weight: bold;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-around;  
+}
+
+.nav .profile {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav .profile .logout {
+  background: none;
+  border: none;
+}
+
+.tab-answer {
+  display: flex;
+  justify-content: flex-start;  
+}
+
 .nav ul {
   display: flex;
   flex-direction: row;
@@ -74,10 +95,34 @@ li {
   margin: 10px;
 }
 
-.tweet {
+/* View Poll Button */
+.view-poll {
+  width: 100%;
+  background-color:#44c767;
+	border-radius:10px;
+	border:1px solid #18ab29;
+	cursor:pointer;
+	color:#ffffff;
+  display: inline-block;
+	text-decoration: none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+
+.view-poll:hover{
+  background-color:#5cbf2a;
+  transition: all 0.4s ease 0s;
+}
+
+.view-poll:active {
+  position:relative;
+	top:1px;
+}
+
+/* Hacky but less typing in the video */
+.question {
   width: 100%;
   max-width: 590px;
-  padding: 10px;
+  padding: 30px;
   display: flex;
   margin: 0 auto;
   border: 1px solid #dad7d7;
@@ -85,79 +130,46 @@ li {
   cursor: pointer;
 }
 
-.tweet-info {
+.question hr { 
+  border:      none;
+  border-left: 1px solid hsla(200, 10%, 50%,100);
+  height:      10vh;
+  width:       1px;       
+}
+
+.question-info {
+  width: 100%;
   margin: 10px;
   display: flex;
   flex-direction: column;
 }
 
-/* Hacky but less typing in the video */
-.tweet-info > div > span:first-child {
+.question-avatar {
+  width: 50%;
+}
+
+.question-avatar > p {
+  color: #000000;
+}
+
+.question-info > div > span:first-child {
   font-weight: bold;
   margin-right: 5px;
 }
-.tweet-info > div > span:nth-child(2) {
+.question-info > div > span:nth-child(2) {
   color: #969696;
   font-size: 16px;
 }
-.tweet-info > div > div {
+.question-info > div > div {
   color: #969696;
   font-size: 15px;
 }
-.tweet-info > div > p {
+.question-info > div > p {
   font-size: 18px;
   margin: 10px 0;
 }
-.tweet-icons {
-  display: flex;
-  align-items: center;
-}
-.tweet-icons > span {
-  color: #969696;
-  margin: 0 15px 0 5px;
-  font-size: 18px !important;
-}
-.tweet-icon {
-  font-size: 27px;
-  color: #697784;
-}
-.tweet-icon:hover {
-  color: #00b5d6;
-  cursor: pointer;
-}
-.replying-to {
-  border: none;
-  background: transparent;
-  margin: 0;
-  padding: 0;
-  color: #969696;
-  cursor: pointer;
-}
 
-.heart-button {
-  background: transparent;
-  border: none;
-}
-
-.new-tweet {
-  width: 100%;
-  max-width: 590px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.textarea {
-  border-radius: 4px;
-  border: 1px solid #dad7d7;
-  padding: 10px;
-  font-size: 15px;
-  height: 100px;
-}
-
-.tweet-length {
-  text-align: right;
-  margin-top: 10px;
-  font-size: 20px;
-  color: #C3392A;
+.question-info > div > button {
+  font-size: 18px;
+  margin: 10px 0;
 }
