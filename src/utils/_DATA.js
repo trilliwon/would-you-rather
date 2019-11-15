@@ -4,7 +4,7 @@ let users = {
     name: 'Won Jo',
     avatarURL: "https://pbs.twimg.com/profile_images/1171418398586068992/HD4ruPuP_400x400.jpg",
     answers: {
-      "6ni6ok3ym7mf1p33lnez": 'optionTwo',
+      "6ni6ok3ym7mf1p33lnez": 'optionOne',
       "am8ehyc8byjqgar0jgpub9": 'optionTwo',
     }
   },
@@ -62,7 +62,7 @@ let questions = {
     author: 'johndoe',
     timestamp: 1468479767190,
     optionOne: {
-      votes: [],
+      votes: ['won'],
       text: 'become a superhero',
     },
     optionTwo: {
@@ -79,7 +79,7 @@ let questions = {
       text: 'be telekinetic',
     },
     optionTwo: {
-      votes: ['sarahedo'],
+      votes: ['sarahedo', 'won'],
       text: 'be telepathic'
     }
   },
