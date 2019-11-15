@@ -14,7 +14,7 @@ class SignIn extends Component {
     render() {
         const { users } = this.props
         return (
-            <div className='container'>
+            <div className='signin'>
                 <div>
                     <h2>Welcome to the Would You Rather App</h2>
                     <h4>Pease sign in to continue</h4>
