@@ -9,6 +9,7 @@ import SignIn from './SignIn'
 import QuestionPage from './QuestionPage'
 import NewQuestion from './NewQuestion'
 import LeaderBoard from './Leaderboard';
+import NoMatch from './NoMatch'
 
 class App extends Component {
 
@@ -28,6 +29,7 @@ class App extends Component {
                 : <div>
                   <Nav />
                   <Route path='/' exact component={Home} />
+                  <Route path='/questions/bad_id' component={NoMatch} />
                   <Route path='/question/:id' component={QuestionPage} />
                   <Route path='/new' component={NewQuestion} />
                   <Route path='/leaderboard' component={LeaderBoard} />

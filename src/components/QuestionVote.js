@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 class QuestionVote extends Component {
@@ -25,7 +26,10 @@ class QuestionVote extends Component {
     }
 
     render() {
-        const { avatarURL, name, question } = this.props
+        const { avatarURL, name, question, badPath } = this.props
+        if (badPath) {
+            return <Redirect to="/questions/bad_id" />;
+        }
         const { optionOne, optionTwo } = question
 
         return (
@@ -77,6 +81,11 @@ class QuestionVote extends Component {
 
 function mapStateToProps({ authedUser, users, questions }, { id }) {
     const question = questions[id]
+    if (question === undefined) {
+        return {
+            badPath: true
+        }
+    }
     const avatarURL = users[question.author].avatarURL
     const name = users[question.author].name
     return {
