@@ -4,7 +4,7 @@ import { receiveQuestions } from '../actions/questions'
 import { setAuthedUser } from '../actions/authedUser'
 import { showLoading, hideLoading } from 'react-redux-loading'
 
-let AUTHED_ID = null
+let AUTHED_ID = null 
 
 export function handleInitialData() {
     return (dispatch) => {
