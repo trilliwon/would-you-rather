@@ -8,7 +8,7 @@ class Home extends Component {
         return (
             <div className='container'>
                 <Tabs defaultActiveKey='unanswered' className='tab-answer'>
-                    <Tab eventKey='unanswered' title="Unanswered Question">
+                    <Tab eventKey='unanswered' title="Unanswered">
                         <ul className='dashboard-list'>
                             {this.props.unansweredQuestionIds.map((id) => (
                                 <li key={id}>
@@ -17,7 +17,7 @@ class Home extends Component {
                             ))}
                         </ul>
                     </Tab>
-                    <Tab eventKey='answered' title="Answered Question">
+                    <Tab eventKey='answered' title="Answered">
                         <ul className='dashboard-list'>
                             {this.props.answeredQuestionIds.map((id) => (
                                 <li key={id}>

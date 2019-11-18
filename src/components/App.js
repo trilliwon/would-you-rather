@@ -6,6 +6,9 @@ import { handleInitialData } from '../actions/shared'
 import Home from './Home'
 import Nav from './Nav'
 import SignIn from './SignIn'
+import QuestionPage from './QuestionPage'
+import NewQuestion from './NewQuestion'
+import LeaderBoard from './Leaderboard';
 
 class App extends Component {
 
@@ -25,6 +28,9 @@ class App extends Component {
                 : <div>
                   <Nav />
                   <Route path='/' exact component={Home} />
+                  <Route path='/question/:id' component={QuestionPage} />
+                  <Route path='/new' component={NewQuestion} />
+                  <Route path='/leaderboard' component={LeaderBoard} />
                 </div>}
             </div>
           </Router>
