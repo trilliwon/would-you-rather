@@ -19,6 +19,6 @@ export function saveQuestion(question) {
     return _saveQuestion(question)
 }
 
-export function saveQuestionAnser(authedUser, qid, answer) {
+export function saveQuestionAnswer(authedUser, qid, answer) {
     return _saveQuestionAnswer(authedUser, qid, answer)
 }
