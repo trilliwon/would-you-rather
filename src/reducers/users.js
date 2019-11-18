@@ -24,11 +24,12 @@ export default function users(state = {}, action) {
                 }
             }
         case ADD_NEW_QUESTION_TO_USER:
+            const userQuestions = state[action.author].questions ? state[action.author].questions : []
             return {
                 ...state,
                 [action.author] : {
                     ...state[action.author],
-                    questions: state[action.author].questions.concat([action.qid])
+                    questions: userQuestions.concat([action.qid])
                 }
             }
         default:
