@@ -8,8 +8,8 @@ Would You Rather is simple game that user can votej for *would you rather* quest
 
 ## Run
 
-- After install packages  with `npm install`
-- Start with `npm start` or `yarn start`
+- `npm install` or `yarn install` to install packages
+- `npm start` or `yarn start` to start project
 
 ## Features
 
